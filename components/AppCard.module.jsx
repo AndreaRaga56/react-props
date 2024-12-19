@@ -4,10 +4,11 @@ import style from "./AppCard.module.css";
 function AppCard({id, title, image, content, tags}) {
 
     let tagsElaborati = tags.map((curTag, i)=>{
-        return <span key={i} className={style.curTag}>{curTag} </span>
+        
+        return <span key={i} className={curTag}>{curTag} </span>
     })
     
-    console.log(tagsElaborati)
+    console.log(style.html)
     
 
     return (
@@ -16,7 +17,7 @@ function AppCard({id, title, image, content, tags}) {
             <h3 className={style.titoloPost}>{title}</h3>
             <p className={style.paragrafo}>{content}</p>
             <p className={style.paragrafo}></p>
-            {tagsElaborati}
+            <div className={style.tags}>{tagsElaborati}</div>            
             <div className={style.button}>LEGGI DI PIÙ</div>
         </div>
     )
