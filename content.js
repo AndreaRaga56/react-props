@@ -34,13 +34,6 @@ const blogPosts = [
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit animi unde quasi enim non esse ratione voluptas voluptate, officiis veritatis magni blanditiis possimus nobis cum id inventore corporis deserunt hic.",
         tags: ["html"],
         published: false,
-    },
-    {
-        id: 5,
-        title: "5 Destinazioni di Viaggio per il 2024",
-        content: "Cerchi ispirazione per il tuo prossimo viaggio? Ecco 5 mete imperdibili per il 2024!",
-        image: "viaggi-2024.jpg",
-        tags: ["viaggi", "destinazioni", "avventura", "tempo libero"]
     }
 ];
 

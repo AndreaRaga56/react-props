@@ -4,11 +4,24 @@ import blogPosts from "../content"
 
 
 function AppMain() {
+
+  const posts = blogPosts.map((CurCard, i)=> CurCard.published &&
+    <AppCard
+    key={i}
+    title={CurCard.title}
+    image={CurCard.image}
+    content={CurCard.content}
+    tags={CurCard.tags}
+    id={CurCard.id}
+  />);
+
   return (
     <section className={style.main}>
       <div className={style.container}>
         <h1 className={style.titolo}>IL MIO BLOG</h1>
-        <AppCard />
+        <div className={style.flex}>
+          {posts}
+        </div>       
       </div>
     </section>
   )
