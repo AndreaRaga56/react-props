@@ -1,6 +1,6 @@
 .card{
-    margin: 0 auto;
-    width: 450px;
+
+    width: calc(100% / 2 - 50px);
     margin-top: 30px;
     border-radius: 25px;
     box-shadow: 10px 10px 40px rgb(0, 0, 0);

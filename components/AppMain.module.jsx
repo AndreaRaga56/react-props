@@ -5,7 +5,8 @@ import blogPosts from "../content"
 
 function AppMain() {
 
-  const posts = blogPosts.map((CurCard, i)=> CurCard.published &&
+  const posts = blogPosts.map((CurCard, i)=> {
+    return CurCard.published &&
     <AppCard
     key={i}
     title={CurCard.title}
@@ -13,7 +14,7 @@ function AppMain() {
     content={CurCard.content}
     tags={CurCard.tags}
     id={CurCard.id}
-  />);
+  />});
 
   return (
     <section className={style.main}>
