@@ -5,16 +5,20 @@ import blogPosts from "../content"
 
 function AppMain() {
 
-  const posts = blogPosts.map((CurCard, i)=> {
-    return CurCard.published &&
-    <AppCard
-    key={i}
-    title={CurCard.title}
-    image={CurCard.image}
-    content={CurCard.content}
-    tags={CurCard.tags}
-    id={CurCard.id}
-  />});
+  const posts = blogPosts.map((CurCard, i) => {
+    if (CurCard.published) {
+      return (
+        <AppCard
+          key={i}
+          title={CurCard.title}
+          image={CurCard.image}
+          content={CurCard.content}
+          tags={CurCard.tags}
+          id={CurCard.id}
+        />
+      );
+    }
+  });
 
   return (
     <section className={style.main}>
